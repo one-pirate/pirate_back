@@ -1,10 +1,10 @@
 import express from "express";
 import { sendCoords } from "./POST_sendCoords";
+import { predictRiskHandler } from "./POST_predictRisk";
 
-const routes = express.Router();
+const router = express.Router();
 
-routes.post("/send-coords", (req, res) => {
-  sendCoords(req, res);
-});
+router.post("/send-coords", sendCoords);
+router.post("/predict-risk", predictRiskHandler);
 
-export default routes;
+export default router;
