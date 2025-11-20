@@ -8,7 +8,7 @@ export const sendCoords = (req: Request, res: Response) => {
     if (!body || !Array.isArray(body.points)) {
       return res.status(400).json({ error: "body.points (array) required" });
     }
-    const spacing = typeof body.spacing === "number" && body.spacing > 0 ? body.spacing : 10; // default 10 km
+    const spacing = typeof body.spacing === "number" && body.spacing > 0 ? body.spacing : 1000; // default 10 km
     const inputPoints: { lat: number; lng: number }[] = body.points.map((p: any) => ({
       lat: Number(p.lat),
       lng: Number(p.lng),
