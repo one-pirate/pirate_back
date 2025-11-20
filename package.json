@@ -27,6 +27,7 @@
     "express": "^5.1.0",
     "geodesy": "^2.4.0",
     "js-spline": "^1.0.1",
+    "maplibre-gl": "^5.13.0",
     "node-fetch": "^2.7.0"
   }
 }
